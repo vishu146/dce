@@ -107,7 +107,7 @@ DCE API clients will need to be updated accordingly, to handle this response.
 
 ## v0.25.0
 
-- **BREAKING CHANGE:** Set the default allowed regions to us-east-1 only
+- **BREAKING CHANGE:** Set the default allowed regions to ap-southeast-2 only
 - Support query params for `GET /accounts` endpoint
 - Fixed bug causing dce auth web page to fail
 - Fix incorrect `POST /leases` validation errors on principal budget (#214)
@@ -116,7 +116,7 @@ DCE API clients will need to be updated accordingly, to handle this response.
 
 **Migration Notes**
 
-This release changes the list of allowed regions to only include `us-east-1` by default. This is in order to reduce the time it takes for account reset CodeBuilds to run. Previously, these codebuilds would take 1h+ to nuke the 18 default regions, even on an empty account. 
+This release changes the list of allowed regions to only include `ap-southeast-2` by default. This is in order to reduce the time it takes for account reset CodeBuilds to run. Previously, these codebuilds would take 1h+ to nuke the 18 default regions, even on an empty account. 
 
 The list of allowed regions is configurable as an `allowed_regions` Terraform variable, and may be set to any region names supported by AWS.
 

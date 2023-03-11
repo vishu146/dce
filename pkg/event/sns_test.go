@@ -54,13 +54,13 @@ func TestSns(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			mockSns := &mocks.SNSAPI{}
-			eventer, _ := NewSnsEvent(mockSns, "arn:aws:sns:us-east-1:123456789012:test")
+			eventer, _ := NewSnsEvent(mockSns, "arn:aws:sns:ap-southeast-2:123456789012:test")
 
 			// Mock Publish call
 			mockSns.On("Publish",
 				&sns.PublishInput{
 					Message:          aws.String(tt.expectedMessage),
-					TopicArn:         aws.String("arn:aws:sns:us-east-1:123456789012:test"),
+					TopicArn:         aws.String("arn:aws:sns:ap-southeast-2:123456789012:test"),
 					MessageStructure: aws.String("json"),
 				},
 			).Return(nil, tt.snsErr)

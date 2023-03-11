@@ -7,7 +7,7 @@
 // "go run v0.0.1_db_rename_assignment_to_lease.go"
 //
 // This script requires 3 environment variables to be set for its use:
-// "export AWS_CURRENT_REGION=us-east-1"  - The region the database resides in
+// "export AWS_CURRENT_REGION=ap-southeast-2"  - The region the database resides in
 // "export SOURCE_DB=RedboxAccountAssignmentProd"  - Name of the Assignment table for Accounts
 // "export LEASE_DB=RedboxLeasetProd"  - Name of the Lease table for Accounts. This is the new table to which items from SOURCE_DB will be added to
 
@@ -51,7 +51,7 @@ func main() {
 	awsSession := session.Must(session.NewSession())
 	dynDB := dynamodb.New(
 		awsSession,
-		aws.NewConfig().WithRegion("us-east-1"),
+		aws.NewConfig().WithRegion("ap-southeast-2"),
 	)
 
 	err := migrationV10(&migrationV10Input{

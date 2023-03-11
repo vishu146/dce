@@ -20,9 +20,9 @@ func TestNewEvent(t *testing.T) {
 		mockSqs := &awsMocks.SQSAPI{}
 		mockCwe := &awsMocks.CloudWatchEventsAPI{}
 
-		accountCreatedTopicArn, _ := arn.Parse("arn:aws:sns:us-east-1:123456789012:createAccount")
-		accountDeletedTopicArn, _ := arn.Parse("arn:aws:sns:us-east-1:123456789012:deleteAccount")
-		leaseAddedTopicArn, _ := arn.Parse("arn:aws:sns:us-east-1:123456789012:createLease")
+		accountCreatedTopicArn, _ := arn.Parse("arn:aws:sns:ap-southeast-2:123456789012:createAccount")
+		accountDeletedTopicArn, _ := arn.Parse("arn:aws:sns:ap-southeast-2:123456789012:deleteAccount")
+		leaseAddedTopicArn, _ := arn.Parse("arn:aws:sns:ap-southeast-2:123456789012:createLease")
 		accountResetQueueURL := "http://sqs.com/queue"
 
 		eventer, err := NewService(NewServiceInput{

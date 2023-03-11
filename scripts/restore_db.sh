@@ -15,9 +15,9 @@ set -euo pipefail
 #   # List available backups for table 
 #   ./restore_db.sh --target-table-name my-table-name --list-backups
 #   # Target table doesn't exist, restore
-#   ./restore_db.sh --target-table-name my-table-name --backup-arn arn:aws:dynamodb:us-east-1:123456789012:table/my-table-name/backup/5678901234-987654
+#   ./restore_db.sh --target-table-name my-table-name --backup-arn arn:aws:dynamodb:ap-southeast-2:123456789012:table/my-table-name/backup/5678901234-987654
 #   # Target table exists, force delete the table, restore
-#   ./restore_db.sh --target-table-name my-table-name --backup-arn arn:aws:dynamodb:us-east-1:123456789012:table/my-table-name/backup/5678901234-987654 --force-delete-table
+#   ./restore_db.sh --target-table-name my-table-name --backup-arn arn:aws:dynamodb:ap-southeast-2:123456789012:table/my-table-name/backup/5678901234-987654 --force-delete-table
 # 
 # Required tools on execution host:
 # Bourne Again SHell (documented for completeness)

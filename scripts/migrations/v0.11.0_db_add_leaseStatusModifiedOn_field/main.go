@@ -7,7 +7,7 @@
 // "go run dbAddLeaseModOn.go"
 //
 // This script requires 2 environment variables to be set for its use:
-// "export AWS_CURRENT_REGION=us-east-1"  - The region the database resides in
+// "export AWS_CURRENT_REGION=ap-southeast-2"  - The region the database resides in
 // "export LEASE_DB=Leases"  - Name of the Lease table for Accounts. This is the new table to which items from SOURCE_DB will be added to
 
 package main
@@ -116,7 +116,7 @@ func main() {
 	awsSession := session.Must(session.NewSession())
 	dynDB := dynamodb.New(
 		awsSession,
-		aws.NewConfig().WithRegion("us-east-1"),
+		aws.NewConfig().WithRegion("ap-southeast-2"),
 	)
 
 	// Set a time we can compare to

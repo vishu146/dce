@@ -29,7 +29,7 @@ type accountControllerConfiguration struct {
 	PrincipalMaxSessionDuration int64    `env:"PRINCIPAL_MAX_SESSION_DURATION" envDefault:"100"`
 	Tags                        []*iam.Tag
 	ResetQueueURL               string   `env:"RESET_SQS_URL" envDefault:"DefaultResetSQSUrl"`
-	AllowedRegions              []string `env:"ALLOWED_REGIONS" envDefault:"us-east-1"`
+	AllowedRegions              []string `env:"ALLOWED_REGIONS" envDefault:"ap-southeast-2"`
 }
 
 var (
@@ -102,7 +102,7 @@ func initConfig() {
 	}
 
 	// load up the values into the various settings...
-	err := cfgBldr.WithEnv("AWS_CURRENT_REGION", "AWS_CURRENT_REGION", "us-east-1").Build()
+	err := cfgBldr.WithEnv("AWS_CURRENT_REGION", "AWS_CURRENT_REGION", "ap-southeast-2").Build()
 	if err != nil {
 		log.Printf("Error: %+v", err)
 	}

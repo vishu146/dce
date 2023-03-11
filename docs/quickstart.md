@@ -26,9 +26,9 @@ Deploy DCE and lease an account quickly using the DCE CLI.
 1. Retrieve the DCE API url from API Gateway in your master account, and add it to the dce config file, e.g.
     ```
     api:
-        host: abcdefghij.execute-api.us-east-1.amazonaws.com
+        host: abcdefghij.execute-api.ap-southeast-2.amazonaws.com
         basepath: /api
-    region: us-east-1
+    region: ap-southeast-2
     ```
 
 1. Prepare a second AWS account to be your first "DCE Child Account".

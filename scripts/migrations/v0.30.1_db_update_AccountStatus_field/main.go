@@ -74,7 +74,7 @@ func main() {
 	awsSession := session.Must(session.NewSession())
 	dynDB := dynamodb.New(
 		awsSession,
-		aws.NewConfig().WithRegion("us-east-1"),
+		aws.NewConfig().WithRegion("ap-southeast-2"),
 	)
 
 	xlsx, err := excelize.OpenFile("accountstodelete.xlsx")

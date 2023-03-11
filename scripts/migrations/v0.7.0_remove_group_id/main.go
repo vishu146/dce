@@ -7,7 +7,7 @@
 // "go run db_group_migrate.go"
 //
 // This script requires 3 environment variables to be set for its use:
-// "export AWS_CURRENT_REGION=us-east-1"  - The region the database resides in
+// "export AWS_CURRENT_REGION=ap-southeast-2"  - The region the database resides in
 // "export ACCOUNT_DB=RedboxAccountsProd"  - Name of the Account table
 // "export ASSIGNMENT_DB=RedboxAccountAssignmentProd"  - Name of the Assignment table for Accounts
 

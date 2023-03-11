@@ -195,7 +195,7 @@ func TestIAMResourceName(t *testing.T) {
 		},
 		{
 			name: "when a non iam resource is provided. A nil is returned.",
-			arn:  New("aws", "sns", "us-east-1", "123456789012", "topic"),
+			arn:  New("aws", "sns", "ap-southeast-2", "123456789012", "topic"),
 			exp:  nil,
 		},
 	}

@@ -49,7 +49,7 @@ stages:
             displayName: "Unit Tests"
             inputs:
               awsCredentials: "AWS_Login"
-              regionName: "us-east-1"
+              regionName: "ap-southeast-2"
               scriptType: "inline"
               inlineScript: |
                 set -euxo pipefail
@@ -156,7 +156,7 @@ stages:
                   displayName: "Lease DCE Account"
                   inputs:
                     awsCredentials: "AWS_DCE_API_ADMIN_NONPROD"
-                    regionName: "us-east-1"
+                    regionName: "ap-southeast-2"
                     scriptType: "inline"
                     inlineScript: |
                       set -ex
@@ -168,7 +168,7 @@ stages:
                         api:
                           host: $(DCE_NONPROD_HOSTNAME)
                           basepath: /api
-                        region: us-east-1
+                        region: ap-southeast-2
                       " > ./dce.yml
 
 
@@ -239,7 +239,7 @@ stages:
                       ${ARTIFACTS_BUCKET_NAME}
                   displayName: "Deploy Application Code"
                   env:
-                    AWS_DEFAULT_REGION: us-east-1
+                    AWS_DEFAULT_REGION: ap-southeast-2
 
                 # Functional Tests
                 - bash: |
@@ -315,7 +315,7 @@ stages:
                   displayName: "DCE Lease Login"
                   inputs:
                     awsCredentials: "AWS_DCE_API_ADMIN_NONPROD"
-                    regionName: "us-east-1"
+                    regionName: "ap-southeast-2"
                     scriptType: "inline"
                     inlineScript: |
                       set -ex
@@ -348,7 +348,7 @@ stages:
                   displayName: "DCE Lease End"
                   inputs:
                     awsCredentials: "AWS_DCE_API_ADMIN_NONPROD"
-                    regionName: "us-east-1"
+                    regionName: "ap-southeast-2"
                     scriptType: "inline"
                     inlineScript: |
                       set -ex

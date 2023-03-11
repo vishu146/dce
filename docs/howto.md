@@ -94,9 +94,9 @@ This section will cover deployment using the DCE CLI with credentilas configured
 
     ```
     api:
-      host: abcdefghij.execute-api.us-east-1.amazonaws.com
+      host: abcdefghij.execute-api.ap-southeast-2.amazonaws.com
       basepath: /api
-    region: us-east-1
+    region: ap-southeast-2
     ```
 
 #### Using advanced deployment options
@@ -128,14 +128,14 @@ api:
   # {restapi_id}.execute-api.{region}.amazonaws.com
   # For more information, see 
   # https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-call-api.html
-  host: api-gateway-id.execute-api.us-east-1.amazonaws.com
+  host: api-gateway-id.execute-api.ap-southeast-2.amazonaws.com
   # The stage name of the API Gateway
   # Default: /api
   basepath: /api
 # The AWS region. It must match the region configured in the 
 # api.host. Must be one of:
-# "us-east-1", "us-east-2", "us-west-1", "us-west-2"
-region: us-east-1
+# "ap-southeast-2", "us-east-2", "us-west-1", "us-west-2"
+region: ap-southeast-2
 # Terraform configuration
 terraform:
   # The full path to the locally-cached terraform binary used
@@ -370,7 +370,7 @@ command as shown here:
 
 1. Verify that the AWS CLI is [configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html).
 with an IAM user that has admin-level permissions in your AWS `master account <concepts.html#master-account>`_.
-1. Make sure that the AWS region is set to *us-east-1* by using the command
+1. Make sure that the AWS region is set to *ap-southeast-2* by using the command
 as shown:
 
         $ aws configure list
@@ -379,7 +379,7 @@ as shown:
         profile                <not set>             None    None
         access_key     ****************NXAW shared-credentials-file    
         secret_key     ****************ymwP shared-credentials-file    
-        region                us-east-1      config-file    ~/.aws/config
+        region                ap-southeast-2      config-file    ~/.aws/config
 
 1. Change into the base directory and use `make` to deploy the code as shown here:
 
@@ -400,7 +400,7 @@ terraform output api_url
 All endpoints use this value as the base url. For example, to view accounts:
 
 ```
-GET https://asdfghjkl.execute-api.us-east-1.amazonaws.com/api/accounts
+GET https://asdfghjkl.execute-api.ap-southeast-2.amazonaws.com/api/accounts
 ```
 
 ### Authenticating with DCE
@@ -706,7 +706,7 @@ Budget notification email templates are rendered using [golang templates](https:
 
 ### AWS Regions
 
-By default, DCE users are limited to working in `us-east-1` by IAM Policy. Limiting users to a small number of regions reduces the amount of time it takes to reset accounts. 
+By default, DCE users are limited to working in `ap-southeast-2` by IAM Policy. Limiting users to a small number of regions reduces the amount of time it takes to reset accounts. 
 
 To override this behavior, you may set the terraform `allowed_regions` variable to a list of AWS region names.
 

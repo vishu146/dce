@@ -24,7 +24,7 @@ func TestMigrationV0_10_0(t *testing.T) {
 	awsSession := session.Must(session.NewSession())
 	dynDB := dynamodb.New(
 		awsSession,
-		aws.NewConfig().WithRegion("us-east-1"),
+		aws.NewConfig().WithRegion("ap-southeast-2"),
 	)
 
 	// Clean DB table to start, and clean again when we're done

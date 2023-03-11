@@ -8,7 +8,7 @@
 set -euxo pipefail
 
 KEY="local-tf-state"
-REGION="us-east-1"
+REGION="ap-southeast-2"
 TABLE="local-tf-state"
 NAMESPACE=${DCE_NAMESPACE:-$(whoami)}
 BUILD_ARTIFACT="bin/build_artifacts.zip"

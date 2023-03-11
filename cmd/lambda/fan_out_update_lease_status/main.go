@@ -33,7 +33,7 @@ func init() {
 	}
 
 	// load up the values into the various settings...
-	err := cfgBldr.WithEnv("AWS_CURRENT_REGION", "AWS_CURRENT_REGION", "us-east-1").Build()
+	err := cfgBldr.WithEnv("AWS_CURRENT_REGION", "AWS_CURRENT_REGION", "ap-southeast-2").Build()
 	if err != nil {
 		log.Printf("Error: %+v", err)
 	}

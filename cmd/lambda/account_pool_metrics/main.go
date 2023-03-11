@@ -22,7 +22,7 @@ func initConfig() {
 	// load up the values into the various settings...
 	cfgBldr := &config.ConfigurationBuilder{}
 	_ = cfgBldr.
-		WithEnv("AWS_CURRENT_REGION", "AWS_CURRENT_REGION", "us-east-1").
+		WithEnv("AWS_CURRENT_REGION", "AWS_CURRENT_REGION", "ap-southeast-2").
 		Build()
 
 	svcBuilder := &config.ServiceBuilder{Config: cfgBldr}

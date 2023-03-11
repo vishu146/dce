@@ -26,7 +26,7 @@ func TestCredentialsWebPageLoads(t *testing.T) {
 	})
 
 	endpointUrl := apiURL + "/auth"
-	region := "us-east-1"
+	region := "ap-southeast-2"
 	creds := chainCredentials
 	httpMethod := "GET"
 

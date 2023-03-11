@@ -21,7 +21,7 @@ var testConfig = ServiceConfig{
 	S3PolicyKey:                 "DefaultPrincipalPolicyS3Key",
 	PrincipalIAMDenyTags:        []string{"DefaultPrincipalIamDenyTags"},
 	PrincipalMaxSessionDuration: 3600,
-	AllowedRegions:              []string{"us-east-1"},
+	AllowedRegions:              []string{"ap-southeast-2"},
 	TagEnvironment:              "DefaultTagEnvironment",
 	TagContact:                  "DefaultTagContact",
 	TagAppName:                  "DefaultTagAppName",

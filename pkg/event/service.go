@@ -18,10 +18,10 @@ type NewServiceInput struct {
 	SnsClient              snsiface.SNSAPI
 	SqsClient              sqsiface.SQSAPI
 	CweClient              cloudwatcheventsiface.CloudWatchEventsAPI
-	AccountCreatedTopicArn string `env:"ACCOUNT_CREATED_TOPIC_ARN" envDefault:"arn:aws:sns:us-east-1:123456789012:account-create"`
-	AccountDeletedTopicArn string `env:"ACCOUNT_DELETED_TOPIC_ARN" envDefault:"arn:aws:sns:us-east-1:123456789012:account-delete"`
+	AccountCreatedTopicArn string `env:"ACCOUNT_CREATED_TOPIC_ARN" envDefault:"arn:aws:sns:ap-southeast-2:123456789012:account-create"`
+	AccountDeletedTopicArn string `env:"ACCOUNT_DELETED_TOPIC_ARN" envDefault:"arn:aws:sns:ap-southeast-2:123456789012:account-delete"`
 	AccountResetQueueURL   string `env:"RESET_SQS_URL" envDefault:"DefaultResetSQSUrl"`
-	LeaseAddedTopicArn     string `env:"LEASE_ADDED_TOPIC" envDefault:"arn:aws:sns:us-east-1:123456789012:lease-added"`
+	LeaseAddedTopicArn     string `env:"LEASE_ADDED_TOPIC" envDefault:"arn:aws:sns:ap-southeast-2:123456789012:lease-added"`
 }
 
 // Service is the public interface for publishing events

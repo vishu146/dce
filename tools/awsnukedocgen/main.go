@@ -89,7 +89,7 @@ const iamTemplate string = `
             "Condition": {
                 "StringEquals": {
                     "aws:RequestedRegion": [
-                        "us-east-1",
+                        "ap-southeast-2",
                         "us-west-1"
                     ]
                 }

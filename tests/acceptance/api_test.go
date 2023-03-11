@@ -2355,7 +2355,7 @@ func apiRequest(t *testing.T, input *apiRequestInput) *apiResponse {
 		input.creds = chainCredentials
 	}
 	if input.region == "" {
-		input.region = "us-east-1"
+		input.region = "ap-southeast-2"
 	}
 	if input.maxAttempts == 0 {
 		input.maxAttempts = 30

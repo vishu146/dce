@@ -116,7 +116,7 @@
 #
 #[ -z "$REGION" ] || [ -z "$NAMESPACE" ] && echo "Usage: ./delecte-dce.sh [region] [namespace] \
 #
-#  region: AWS region, e.g. us-east-1
+#  region: AWS region, e.g. ap-southeast-2
 #  namespace: The namespace appended to all of your DCE infrastructure. e.g. you should see a lambda named \"update_lease_status-{namespace}\"
 #" && exit 1
 #[ ! ${#NAMESPACE} -ge 4 ] && echo "Namespace must be longer than 3 characters" && exit 1
